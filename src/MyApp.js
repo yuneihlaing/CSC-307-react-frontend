@@ -52,7 +52,7 @@ function MyApp() {
 
   function removeOneCharacter(index) {
     const c = characters.find((user, i) => i === index);
-    deleteCall(c.id).then((result) => {
+    deleteCall(c._id).then((result) => {
       if (result && result.status === 200) {
         const updated = characters.filter((character, i) => {
           return i !== index;
